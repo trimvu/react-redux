@@ -60,7 +60,7 @@ const Deposit = () => {
 
   const dispatch = useDispatch();
   const dollarsGlobal = useSelector(state => state.money.dollarsGlobal)
-  console.log(dollarsGlobal) 
+  // console.log(dollarsGlobal) 
 
   const handleSubmit = (e) => {
 

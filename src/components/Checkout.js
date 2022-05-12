@@ -5,7 +5,8 @@ import Card from 'react-bootstrap/Card'
 const Checkout = () => {
 
     const cart = useSelector(state => state.add.cart)
-    console.log(cart)
+    const totalPrice = useSelector(state => state.add.totalPrice)
+    // console.log(cart)
 
 
     return (
@@ -33,6 +34,8 @@ const Checkout = () => {
                                 
                         })
                     }
+
+                    <div>Total Price: ${totalPrice}</div>
         </>
     )
 }
