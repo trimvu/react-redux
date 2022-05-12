@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Button from 'react-bootstrap/Button';
+import { useNavigate } from 'react-router-dom';
 
-function App() {
+const App = () => {
+
+  const navigate = useNavigate();
+
+  const handleClick = (e) => {
+
+    e.preventDefault()
+
+    navigate('/deposit')
+
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      App
+
+      <br />
+      Welcome! In this app, you will be able to deposit from $1 to $500 to purchase gifs.
+      <br />
+      $1 = more difficult to purchase gifs.
+      <br />
+      $500 = easier to purchase gifs.
+      <br /> 
+      Click to deposit money: 
+      <br />
+      <Button onClick={handleClick} >
+        Continue
+      </Button>
+    </>
+  )
 }
 
-export default App;
+export default App
