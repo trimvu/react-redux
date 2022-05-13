@@ -2,7 +2,7 @@ import React, { useState, useEffect} from 'react'
 import { useDispatch, useSelector} from 'react-redux'
 import { useNavigate } from 'react-router-dom';
 import addAction from '../actions/addAction';
-// import {key} from '../secret/key'
+import key from '../secrets'
 
 const Buy = () => {
 
@@ -16,7 +16,7 @@ const Buy = () => {
   const [gif, setGif] = useState([]);
   
   const fetchGif = async () => {
-    let response = await fetch(`https://api.giphy.com/v1/gifs/random?api_key=Z4c9jyzQYw8Xvs5xQ9WYeCTo7dhWXKc7&tag=&rating=r`)
+    let response = await fetch(`https://api.giphy.com/v1/gifs/random?api_key=${key}&tag=&rating=r`)
     let data = await response.json();
 
     // console.log(data.data)

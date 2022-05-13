@@ -40,7 +40,7 @@ import Checkout from './components/Checkout';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import BaseLayout from './components/layout/BaseLayout'
-import './secret/key'
+import './secrets'
 
 import {createStore} from 'redux'; 
 import {Provider} from 'react-redux'
